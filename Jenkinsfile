@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-        stage('Ejecutar Pruebas') {
+        stages('Ejecutar Pruebas') {
             steps {
                 script {
                     try {
@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('Generar evidencia') {
+        stages('Generar evidencia') {
             steps {
                 script {
                     try {
