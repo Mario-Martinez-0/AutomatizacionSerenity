@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Automatizacion Serenity</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4fe4a68261c0887d8684306c50d1b4919a0dc4018ac1cfc59b538a3b4d891d8f.html">Iniciar Sesion En La Pagina Serenity.Is Con Usuario Y Contrasena Y Registrar Un Nuevo Cliente Exitosamente</a></span>
+                > <span class="truncate-60"><a
+                    href="25b52bf20752cf50eb85111379d1707e70ee7e6e12b729b750134eb581e3c9d4.html">inciar sesion y registrar un nuevo cliente </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-02-2023 21:31</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Iniciar Sesion En La Pagina Serenity.Is Con Usuario Y Contrasena Y Registrar Un Nuevo Cliente Exitosamente </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                            <div class="requirementNarrative">Background: Inicio sesion
+                                    <p></p>
+                            </div>
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="30514c33454b8ef6c925e0aeb8b39b85b7a9fd375e274cdc3be9e76305c6fa1c.html">Historia
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="773a571d092c5846a3019576b732f5fa2a9b129891c011c10cda8839a7f193e0.html">Regresion
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">inciar sesion y registrar un nuevo cliente
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando damos click en nuevo cliente, diligenciamos el formulario con los datos de nuevo cliente y le damos click en ahorrar<br>Entonces mario vera el nuevo cliente en la lista de clientes registrados</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c2b22a5dd2e6f1e98cefa3d83c8d21bab205dd577d66c9e612e422d1a748df56.png" title=" Example: {identificacion=ABJKF, nombreEmpresa=tecnologiaM, nombreContrato=tecno, tituloContrato=tecnoligiaR, representante=Laura Callahan, direccion=calle45 # 37, pais=Argentina, ciudad=Buenos Aires, region=centro, codigoPostal=b7506, telefono=36258765, fax=36258765, fechaContacto=11/23/2022, ultimoContacto=Laura Callahan, correo=tecnologia@gmail.com}" width="1920"/>
+                <img src="c2b22a5dd2e6f1e98cefa3d83c8d21bab205dd577d66c9e612e422d1a748df56.png" title=" Dado que mario abre la pagina &quot;https://serenity.is/demo/&quot;" width="1920"/>
+                <img src="c2b22a5dd2e6f1e98cefa3d83c8d21bab205dd577d66c9e612e422d1a748df56.png" title=" Mario abrir sereni" width="1920"/>
+                <img src="c2b22a5dd2e6f1e98cefa3d83c8d21bab205dd577d66c9e612e422d1a748df56.png" title=" Mario opens the https://serenity.is/demo/" width="1920"/>
+                <img src="c2b22a5dd2e6f1e98cefa3d83c8d21bab205dd577d66c9e612e422d1a748df56.png" title=" Mario abrir sereni (completed)" width="1920"/>
+                <img src="c2b22a5dd2e6f1e98cefa3d83c8d21bab205dd577d66c9e612e422d1a748df56.png" title=" Dado que mario abre la pagina &quot;https://serenity.is/demo/&quot; (completed)" width="1920"/>
+                <img src="cbaabd4d8c8d381431e3e720a9785d89fca9122ce4c3daa8dab6c90f765beb8e.png" title=" Y realiza el login exitoso con usuario y contraena &quot;admin&quot; &quot;serenity&quot;" width="1920"/>
+                <img src="cbaabd4d8c8d381431e3e720a9785d89fca9122ce4c3daa8dab6c90f765beb8e.png" title=" Mario iniciosereni step" width="1920"/>
+                <img src="cbaabd4d8c8d381431e3e720a9785d89fca9122ce4c3daa8dab6c90f765beb8e.png" title=" Mario enters 'admin' into Escribimos el usuario" width="1920"/>
+                <img src="740dd41de39f3692fb71e81ed0e6d03268b042ceccef1254ba63912a279bea12.png" title=" Mario enters 'serenity' into Escribimos la contrasena" width="1920"/>
+                <img src="c4615ab9f7c713f1ffb22f7bbbc534c272305c71d0a2e0ed54f8027c2b46f5b6.png" title=" Mario clicks on Click en el boton iniciar sesion" width="1920"/>
+                <img src="6ff652d84a9496702fae1be69b3f3a28cc8164a0ba53fd77576be20d8e87a737.png" title=" Mario iniciosereni step (completed)" width="1920"/>
+                <img src="6ff652d84a9496702fae1be69b3f3a28cc8164a0ba53fd77576be20d8e87a737.png" title=" Y realiza el login exitoso con usuario y contraena &quot;admin&quot; &quot;serenity&quot; (completed)" width="1920"/>
+                <img src="1e6e7541bda6aeccfd5eff1d728ec7a4147fd67de9a7cfceab2da548116686e2.png" title=" Cuando damos click en nuevo cliente, diligenciamos el formulario con los datos de nuevo cliente y le damos click en ahorrar
+| ABJKF | tecnologiaM | tecno | tecnoligiaR | Laura Callahan | calle45 # 37 | Argentina | Buenos Aires | centro | b7506 | 36258765 | 36258765 | 11/23/2022 | Laura Callahan | tecnologia@gmail.com |" width="1920"/>
+                <img src="1e6e7541bda6aeccfd5eff1d728ec7a4147fd67de9a7cfceab2da548116686e2.png" title=" Mario cliente nuevo step" width="1920"/>
+                <img src="1e6e7541bda6aeccfd5eff1d728ec7a4147fd67de9a7cfceab2da548116686e2.png" title=" Mario clicks on Click en viento del norte" width="1920"/>
+                <img src="32ea69e24ace9665e1879d8b685ba2b2f197a6205e8bd8574f898c6188a16130.png" title=" Mario clicks on Click en cliente" width="1920"/>
+                <img src="9bcd54a6623b8c35d71854b1fc7305add477dea984c0a88f86b981db9c5e651c.png" title=" Mario clicks on Click en nuevo cliente" width="1920"/>
+                <img src="1350a19e36006d170ba2646b10cf3df0244173ca7da0d60e2ecd5446a778329c.png" title=" Mario enters 'ABJKF' into Ingrsar identificacion cliente" width="1920"/>
+                <img src="ba0ff914b9b1ee3ca3cec05d190f7719cb0ddd93027dbe1fffd486fdeab2e37e.png" title=" Mario enters 'tecnologiaM' into Ingresar el nombre de empresa" width="1920"/>
+                <img src="2f8991501d809dda22bcefefba8300086b6ffa3985850921b1c079749c6ee63d.png" title=" Mario enters 'tecno' into Ingresar nombre de contacto" width="1920"/>
+                <img src="a050eec50c2fab9ee1eee4876d40c02feb6865cbc3b5b2d34d9754a8a77ab069.png" title=" Mario enters 'tecnoligiaR' into Igresar tituclo de contacto" width="1920"/>
+                <img src="ab3c818052eccb0a2575bcdeea517c57c068f69ac92b9fe6437df6d0190a75a4.png" title=" Mario enters 'Laura Callahan' into Seleccionar repreesentante" width="1920"/>
+                <img src="e8556a89144f38cbc26a298c54e25d40d9fa6a82897b666e965e2d544e7eed24.png" title=" Mario enters 'calle45 # 37' into Ingresar la direccion" width="1920"/>
+                <img src="05811fdc5b5caaf37f045a27f27cae8c66e14e5c4dbbfcfc9dc7f61c04cec776.png" title=" Mario clicks on Seleccionar opcion" width="1920"/>
+                <img src="b5cf47a2f517f78adbb37b2a74b6c4b0a4fd97e9e0e8e225e6e51a089d4da443.png" title=" Mario clicks on Selecione un pais" width="1920"/>
+                <img src="95bd95deb5dc47f5addead653e906261e501d40de083006df67f0ee4ed6dd2ba.png" title=" Mario enters 'Argentina' into Selecion" width="1920"/>
+                <img src="2cec293aa0040b509092c4acbcd42b1924b9e5fe29e486c6daf6d150ed2733fb.png" title=" Mario clicks on Selecione una opcion" width="1920"/>
+                <img src="0039e8a8fffe5d7875cdb0f12e760c8386b0fc17b3dff10ef1b5a8e3b4c84d30.png" title=" Mario clicks on Selecione la ciudad" width="1920"/>
+                <img src="7b7851572013754cdb2b2e33f65f87f91d014ff52722dfa94163cbffe7bb94be.png" title=" Mario enters 'Buenos Aires' into Selecione una opcion" width="1920"/>
+                <img src="d542ee379ff3b44b533a55dbcb554dfbce618dad7bd2f87076b474783619ab0e.png" title=" Mario clicks on Selecione una opcion" width="1920"/>
+                <img src="59c887eb0447dfeae323ea1bbaa43fb31cd4d822b0c792a97c92fccc291fee0b.png" title=" Mario enters 'centro' into Ingresar la region" width="1920"/>
+                <img src="1067748498240696a60cc40dc94a084a138834c9ab419799220085d6fcf7ebbf.png" title=" Mario enters 'b7506' into Igresar el codigo postal" width="1920"/>
+                <img src="f1dca62ace7c700a2aedd2f0554214b7f7e8a40c455ee269675960c636587b43.png" title=" Mario enters '36258765' into Ingrese el telefono" width="1920"/>
+                <img src="115052b773a29fad8f15d17d77b18fffaacb060535d0c072f2f610ccc1ac43ff.png" title=" Mario enters '36258765' into Ingrese el fax" width="1920"/>
+                <img src="786d267d0e848e70f5c968a731185f8cab1727959ef1878b4de6078170572512.png" title=" Mario enters '11/23/2022' into Ingresar fecha" width="1920"/>
+                <img src="089fb0fd80a1005033b6677587c8bb248cc2ba5089d145df9e1b3e824438c9a8.png" title=" Mario clicks on Igresar quien lo contacto" width="1920"/>
+                <img src="e54beaff6592f3c8bc979c6b910141d51a7505af5786f03bf65b865985a251bc.png" title=" Mario enters 'Laura Callahan' into Igresar quien lo contacto" width="1920"/>
+                <img src="a84303903991e69f59085e4cd8fa8b90dc6ab43972b32d31f0900afbfbe3807b.png" title=" Mario clicks on Igresar quien lo contacto" width="1920"/>
+                <img src="5bee6a3b85e2b8d571ba6682021fc34115f489896ef3e3cc6176b15b08c7d6b4.png" title=" Mario enters 'tecnologia@gmail.com' into Ingrese el correo" width="1920"/>
+                <img src="e8bf685f0fc737c4de12e86768a5fec21736fb43ea7f3661dd511299578b6f29.png" title=" Mario clicks on seleccionar enviar" width="1920"/>
+                <img src="b12d02a0d80a5e0dbcb588394c641c034756dc1e3e154d78ab5c492e7699b98c.png" title=" Mario clicks on Click en aplicar" width="1920"/>
+                <img src="6e76f96bae98a646fb05ef2d6504c33f95022f44fa9ac4e4ea2d4c20ab759115.png" title=" Mario enters 'ABJKF' into Buscar el cliente clreado" width="1920"/>
+                <img src="6e76f96bae98a646fb05ef2d6504c33f95022f44fa9ac4e4ea2d4c20ab759115.png" title=" Mario cliente nuevo step (completed)" width="1920"/>
+                <img src="2d9e16b7cd78cf6683592d71828b74a882b8e7b61aa795801e92296d4290a16b.png" title=" Cuando damos click en nuevo cliente, diligenciamos el formulario con los datos de nuevo cliente y le damos click en ahorrar
+| ABJKF | tecnologiaM | tecno | tecnoligiaR | Laura Callahan | calle45 # 37 | Argentina | Buenos Aires | centro | b7506 | 36258765 | 36258765 | 11/23/2022 | Laura Callahan | tecnologia@gmail.com | (completed)" width="1920"/>
+                <img src="3d09e5bdc8ebfa3000a3e9c4831df3cfde9d0e9fef743dcef76e334480511425.png" title=" Entonces mario vera el nuevo cliente en la lista de clientes registrados
+| ABJKF |" width="1920"/>
+                <img src="3d09e5bdc8ebfa3000a3e9c4831df3cfde9d0e9fef743dcef76e334480511425.png" title=" Then validar cliente step" width="1920"/>
+                <img src="3d09e5bdc8ebfa3000a3e9c4831df3cfde9d0e9fef743dcef76e334480511425.png" title=" Entonces mario vera el nuevo cliente en la lista de clientes registrados
+| ABJKF | (completed)" width="1920"/>
+                <img src="cf921b6b574918e29bca5d7928eeff898a77ec64f9dd66550ef3f512e4904274.png" title=" Example: {identificacion=ABJKF, nombreEmpresa=tecnologiaM, nombreContrato=tecno, tituloContrato=tecnoligiaR, representante=Laura Callahan, direccion=calle45 # 37, pais=Argentina, ciudad=Buenos Aires, region=centro, codigoPostal=b7506, telefono=36258765, fax=36258765, fechaContacto=11/23/2022, ultimoContacto=Laura Callahan, correo=tecnologia@gmail.com} (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.6</span>
+</div>
+</body>
+</html>
