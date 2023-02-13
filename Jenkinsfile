@@ -1,3 +1,9 @@
+#!groovy
+import java.text.SimpleDateFormat
+def dateFormat = new SimpleDateFormat("yyyyMMddHHmm")
+def date = new Date()
+def timestamp = dateFormat.format(date).toString()
+
 pipeline {
     agent any
     stages {
