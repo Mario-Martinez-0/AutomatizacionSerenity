@@ -58,6 +58,6 @@ pipeline {
                             bat 'sonar-scanner'
                         }
             }
-        }*/
-    }
+        }
+    }*/
 }
