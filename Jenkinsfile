@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stages('Ejecutar Pruebas') {
+        stage('Ejecutar Pruebas') {
             steps {
                 script {
                     try {
@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stages('Generar evidencia') {
+        stage('Generar evidencia') {
             steps {
                 script {
                     try {
@@ -58,6 +58,7 @@ pipeline {
                             bat 'sonar-scanner'
                         }
             }
-        }*/
-    }
+        }
+    }*/
+}
 }
