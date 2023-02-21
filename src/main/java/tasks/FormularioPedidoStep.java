@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.*;
-import userinterface.IrPedidoPage;
 import userinterface.PedidosPage;
 
 public class FormularioPedidoStep implements Task {

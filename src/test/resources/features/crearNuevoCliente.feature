@@ -15,7 +15,7 @@ Característica: Iniciar sesion en la pagina serenity.is con usuario y contrasen
       | <identificacion> |
     Ejemplos:
       | identificacion | nombreEmpresa | nombreContrato | tituloContrato | representante  | direccion    | pais      | ciudad       | region | codigoPostal | telefono | fax      | fechaContacto | ultimoContacto | correo               |
-      | ABJVP          | tecnologiaM   | tecno          | tecnoligiaR    | Laura Callahan | calle45 # 37 | Argentina | Buenos Aires | centro | b7506        | 36258765 | 36258765 | 11/23/2022    | Laura Callahan | tecnologia@gmail.com |
+      | ABJVO          | tecnologiaM   | tecno          | tecnoligiaR    | Laura Callahan | calle45 # 37 | Argentina | Buenos Aires | centro | b7506        | 36258765 | 36258765 | 11/23/2022    | Laura Callahan | tecnologia@gmail.com |
 
   @Pedido @Regresion
 

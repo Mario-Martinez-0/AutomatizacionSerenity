@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 public class InicioPage extends PageObject {
 
-      public static final Target TXT_USUARIO = Target.the("Escribimos el usuario").located(By.id("LoginPanel0_Username"));
+    public static final Target TXT_USUARIO = Target.the("Escribimos el usuario").located(By.id("LoginPanel0_Username"));
 
     public static final Target TXT_CONTRASENA = Target.the("Escribimos la contrasena").located(By.id("LoginPanel0_Password"));
 

@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import userinterface.InicioPage;
 import userinterface.IrPedidoPage;
-import userinterface.PedidosPage;
+
 
 
 public class PasosPedidoStep implements Task {
